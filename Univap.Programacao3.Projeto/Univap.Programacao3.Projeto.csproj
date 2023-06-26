@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D8BAF7F-C362-41DB-9812-6F2F990DD04A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Univap.Programacao3.Projeto</RootNamespace>
+    <AssemblyName>Univap.Programacao3.Projeto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Univap.Programacao3.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Engine\Univap.Programacao3.Engine\bin\Debug\Univap.Programacao3.Engine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Aluno.cs" />
+    <Compile Include="Model\AlunoDisciplinaView.cs" />
+    <Compile Include="Model\AulaFormulario.cs" />
+    <Compile Include="Model\Aula.cs" />
+    <Compile Include="Model\Disciplina.cs" />
+    <Compile Include="Model\DisciplinaFormulario.cs" />
+    <Compile Include="Model\Pessoa.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\PessoaAlunoView.cs" />
+    <Compile Include="Model\Presenca.cs" />
+    <Compile Include="Model\Turma.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Frm_BuscarAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_BuscarAula.Designer.cs">
+      <DependentUpon>Frm_BuscarAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_BuscarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_BuscarDisciplina.Designer.cs">
+      <DependentUpon>Frm_BuscarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_BuscarPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_BuscarPessoa.Designer.cs">
+      <DependentUpon>Frm_BuscarPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_BuscarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_BuscarTurma.Designer.cs">
+      <DependentUpon>Frm_BuscarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_CadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_CadastroAluno.Designer.cs">
+      <DependentUpon>Frm_CadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usc_Aula.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Usc_Aula.Designer.cs">
+      <DependentUpon>Usc_Aula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usc_CadastroDisciplina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Usc_CadastroDisciplina.Designer.cs">
+      <DependentUpon>Usc_CadastroDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usc_CadastroPessoas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Usc_CadastroPessoas.Designer.cs">
+      <DependentUpon>Usc_CadastroPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usc_CadastroTurma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Usc_CadastroTurma.Designer.cs">
+      <DependentUpon>Usc_CadastroTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usc_ProfessorDisciplina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Usc_ProfessorDisciplina.Designer.cs">
+      <DependentUpon>Usc_ProfessorDisciplina.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Frm_BuscarAula.resx">
+      <DependentUpon>Frm_BuscarAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_BuscarDisciplina.resx">
+      <DependentUpon>Frm_BuscarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_BuscarPessoa.resx">
+      <DependentUpon>Frm_BuscarPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_BuscarTurma.resx">
+      <DependentUpon>Frm_BuscarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_CadastroAluno.resx">
+      <DependentUpon>Frm_CadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usc_Aula.resx">
+      <DependentUpon>Usc_Aula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usc_CadastroDisciplina.resx">
+      <DependentUpon>Usc_CadastroDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usc_CadastroPessoas.resx">
+      <DependentUpon>Usc_CadastroPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usc_CadastroTurma.resx">
+      <DependentUpon>Usc_CadastroTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usc_ProfessorDisciplina.resx">
+      <DependentUpon>Usc_ProfessorDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
